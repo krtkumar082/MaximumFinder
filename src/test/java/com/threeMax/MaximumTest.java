@@ -42,4 +42,25 @@ public class MaximumTest {
     	 Float getMax=findMax.maximumFloat(2.0F,5.0F,10.0F);
          Assert.assertEquals((Float)10.0F, getMax);
      }
+     
+     @Test
+     public void GivenMaxNumberAmongString_atFirstPosition_ReturnSameNumber() {
+    	 ThreeMax findMax=new ThreeMax();
+    	 String getMax=findMax.maximumString("abe","abd","abc");
+         Assert.assertEquals("abe", getMax);
+     }
+     @Test
+     public void GivenMaxNumberAmongString_atSecondPosition_ReturnSameNumber() {
+    	 ThreeMax findMax=new ThreeMax();
+    	 String getMax=findMax.maximumString("abd","abe","abc");
+         Assert.assertEquals("abe", getMax);
+     }
+     @Test
+     public void GivenMaxNumberAmongString_atThirdPosition_ReturnSameNumber() {
+    	 ThreeMax findMax=new ThreeMax();
+    	 String getMax=findMax.maximumString("abc","abd","abe");
+         Assert.assertEquals("abe", getMax);
+     }
+     
+    
 }
