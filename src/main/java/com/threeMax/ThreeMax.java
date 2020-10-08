@@ -1,8 +1,10 @@
 package com.threeMax;
 
+import java.util.Comparator;
+
 public class ThreeMax {
-      public  int  maximumInteger(Integer x,Integer y,Integer z) {
-    	  Integer max=x;
+      public  <T extends Comparable<T>> T maximum(T x,T y,T z) {
+    	  T max=x;
     	  if(y.compareTo(max)>0) {
     		  max=y;
     	  }
@@ -12,7 +14,7 @@ public class ThreeMax {
     	  return max;
       }
       
-      public  Float  maximumFloat(Float x,Float y,Float z) {
+     /* public  Float  maximumFloat(Float x,Float y,Float z) {
     	  Float max=x;
     	  if(y.compareTo(max)>0) {
     		  max=y;
@@ -33,5 +35,5 @@ public class ThreeMax {
     	  }
     	  return max;
       }
-      
+      */
 }
