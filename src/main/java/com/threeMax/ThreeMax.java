@@ -1,9 +1,23 @@
 package com.threeMax;
 
-import java.util.Comparator;
+//import java.util.Comparator;
 
-public class ThreeMax {
-      public  <T extends Comparable<T>> T maximum(T x,T y,T z) {
+public class ThreeMax <T extends Comparable<T>>{
+	  T x;
+	  T y;
+	  T z;
+	  
+	  public ThreeMax(T x, T y,T z) {
+		  this.x=x;
+		  this.y=y;
+		  this.z=z;
+	  }
+	  
+	  public T testMaximum() {
+		  return maximum(x,y,z);
+	  }
+	
+      public   T maximum(T x,T y,T z) {
     	  T max=x;
     	  if(y.compareTo(max)>0) {
     		  max=y;
@@ -36,4 +50,5 @@ public class ThreeMax {
     	  return max;
       }
       */
+      
 }
