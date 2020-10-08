@@ -1,31 +1,26 @@
 package com.threeMax;
 
+import java.util.Arrays;
+
 //import java.util.Comparator;
 
 public class ThreeMax <T extends Comparable<T>>{
-	  T x;
-	  T y;
-	  T z;
+	  T[] array;
 	  
-	  public ThreeMax(T x, T y,T z) {
-		  this.x=x;
-		  this.y=y;
-		  this.z=z;
+	  public ThreeMax(T[] array) {
+		  this.array=array;
 	  }
 	  
-	  public T testMaximum() {
-		  return maximum(x,y,z);
+	 public  T testMaximum() {
+		  return maximum(array);
 	  }
 	
-      public   T maximum(T x,T y,T z) {
-    	  T max=x;
-    	  if(y.compareTo(max)>0) {
-    		  max=y;
-    	  }
-    	  if(z.compareTo(max)>0) {
-    		  max=z;
-    	  }
-    	  return max;
+      public  T maximum(T[] array) {
+    	  Arrays.sort(array);
+    	  if(array.length!=0)
+    	      return array[array.length-1];
+    	  else
+    		  return null;
       }
       
      /* public  Float  maximumFloat(Float x,Float y,Float z) {
