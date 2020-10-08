@@ -12,7 +12,9 @@ public class ThreeMax <T extends Comparable<T>>{
 	  }
 	  
 	 public  T testMaximum() {
-		  return maximum(array);
+		  T a = maximum(array);
+		  printMax(a);
+		  return a;
 	  }
 	
       public  T maximum(T[] array) {
@@ -22,7 +24,9 @@ public class ThreeMax <T extends Comparable<T>>{
     	  else
     		  return null;
       }
-      
+      public <T> void printMax(T max) {
+    	  System.out.println("Max is " +max);
+      }
      /* public  Float  maximumFloat(Float x,Float y,Float z) {
     	  Float max=x;
     	  if(y.compareTo(max)>0) {
